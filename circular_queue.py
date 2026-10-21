@@ -1,4 +1,4 @@
-# [..., 1,2,3,4,5,6,7, ...]
+# [..., 1,2,3, ...]
 
 class Queue:
     def __init__(self, length):
@@ -23,19 +23,19 @@ class Queue:
         # self.array[self.f_idx] = None
         self.f_idx = ...
         return last_val
-    
+
     def size(self):
         return ...
-    
+
     def empty(self):
         return int(self.is_empty())
-    
+
     def front(self):
         if self.is_empty():
             return -1
 
         return self.array[self.f_idx]
-    
+
     def back(self):
         if self.is_empty():
             return -1
@@ -51,7 +51,7 @@ class Queue:
 
 def run_cmd_with_queue(queue_obj, command):
     cmd_type = command[0]
-    
+
     if cmd_type == "push":
         _, num = command
         res = queue_obj.push(int(num))
