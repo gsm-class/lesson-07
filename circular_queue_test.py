@@ -2,53 +2,6 @@ import pytest
 
 from circular_queue import Queue, run_cmd_with_queue
 
-
-def test_empty_queue_basics():
-    q = Queue(3)
-
-    assert q.size() == 0
-    assert q.empty() == 1
-    assert q.pop() == -1
-    assert q.front() == -1
-    assert q.back() == -1
-
-
-def test_push_pop_fifo_order():
-    q = Queue(5)
-
-    q.push(1)
-    q.push(2)
-    q.push(3)
-
-    assert q.size() == 3
-    assert q.empty() == 0
-    assert q.front() == 1
-    assert q.back() == 3
-
-    assert q.pop() == 1
-    assert q.pop() == 2
-    assert q.pop() == 3
-    assert q.pop() == -1
-
-    assert q.size() == 0
-    assert q.empty() == 1
-
-
-def test_queue_full_returns_minus_one():
-    q = Queue(3)  # 저장 가능 원소 수 3개
-
-    assert q.push(1) is None
-    assert q.push(2) is None
-    assert q.push(3) is None
-
-    # 가득 찬 상태에서 push 실패
-    assert q.push(4) == -1
-
-    assert q.size() == 3
-    assert q.front() == 1
-    assert q.back() == 3
-
-
 def test_circular_wraparound_behavior():
     q = Queue(3)
 

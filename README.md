@@ -8,7 +8,7 @@
 [queue.py](queue.py), [queue_by_class.py](queue_by_class.py) -> [circular_queue.py](circular_queue.py)
 
 ## 카드 문제
-[card2.py](card2.py)  
+[deque.py](deque.py)를 참고하고 [card2.py](card2.py)  
 N장의 카드가 있다. 각각의 카드는 차례로 1부터 N까지의 번호가 붙어 있으며, 1
 번 카드가 제일 위에, N번 카드가 제일 아래인 상태로 순서대로 카드가 놓여 있다.
 이제 다음과 같은 동작을 카드가 한 장 남을 때까지 반복하게 된다. 우선, 제일 위

@@ -1,7 +1,7 @@
 from collections import deque
 
 def calc_last_card(n):
-    d_list = deque([i for i in range(1, n+1)])
+    d_list = ...
 
     rotate_flag = False
 
