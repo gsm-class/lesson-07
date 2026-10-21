@@ -4,7 +4,7 @@ n, m = map(int, input().split())
 target_list = map(int, input().split())
 
 min_move = 0
-num_list = deque([i for i in range(1, n+1)])
+num_list = ...
 
 for find_idx in target_list:
     num_idx = num_list.index(find_idx)
